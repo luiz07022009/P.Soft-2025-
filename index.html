@@ -1,25 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Reservas de quadras</title>
+    <title>SportBook - Agendar Quadras</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Reservas de quadras</h1>
-        <img src="./media/x_logo.png" alt="logo"> <!-- FAZER E ADICIONAR A LOGO -->
-        <nav>
-            <a href="">botão 1</a>
-            <a href="">botão 2</a>
-            <a href="">botão 3</a>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <h1>SportBook</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Início</a>
+                <a href="#quadras">Quadras</a>
+                <a href="#agendamentos">Meus Agendamentos</a>
+                <a href="#conta">Minha Conta</a>
+            </div>
         </nav>
     </header>
-    <aside>
-        <a href="">botão 1</a>
-        <a href="">botão 2</a>
-        <a href="">botão 3</a>
-    </aside>
+
+    <main style="margin-top: 80px">
+        <section id="home" class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Reserve Sua Quadra</h2>
+                    <p>Encontre e reserve as melhores quadras esportivas da cidade. Futebol, tênis, vôlei e muito mais, tudo em um só lugar!</p>
+                    <button class="btn btn-primary">Agende Agora</button>
+                    
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <h3>Rápido</h3>
+                            <p>Reserve em menos de 2 minutos</p>
+                        </div>
+                        <div class="hero-feature">
+                            <h3>Fácil</h3>
+                            <p>Interface simples e intuitiva</p>
+                        </div>
+                        <div class="hero-feature">
+                            <h3>Seguro</h3>
+                            <p>Pagamento 100% seguro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Quadras de Futebol</h3>
+                    <p>Society, Campo e Futsal</p>
+                </div>
+                <div class="card">
+                    <h3>Quadras de Tênis</h3>
+                    <p>Saibro e Sintética</p>
+                </div>
+                <div class="card">
+                    <h3>Quadras de Vôlei</h3>
+                    <p>Indoor e Beach Volley</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendamento" class="container">
+            <div class="card">
+                <h2>Fazer Agendamento</h2>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="sport">Esporte</label>
+                        <select id="sport" required>
+                            <option value="">Selecione um esporte</option>
+                            <option value="futebol">Futebol</option>
+                            <option value="tenis">Tênis</option>
+                            <option value="volei">Vôlei</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Data</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Horário</label>
+                        <input type="time" id="time" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agendar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container" style="margin-top: 40px; text-align: center;">
+        <p>&copy; 2024 SportBook - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
