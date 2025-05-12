@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportBook - Agendar Quadras</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -69,7 +69,7 @@
                 <form id="booking-form">
                     <div class="form-group">
                         <label for="sport">Esporte</label>
-                        <select id="sport" required>
+                        <select id="sport" name="sport" required>
                             <option value="">Selecione um esporte</option>
                             <option value="futebol">Futebol</option>
                             <option value="tenis">Tênis</option>
@@ -78,11 +78,11 @@
                     </div>
                     <div class="form-group">
                         <label for="date">Data</label>
-                        <input type="date" id="date" required>
+                        <input type="date" id="date" name="date" required>
                     </div>
                     <div class="form-group">
                         <label for="time">Horário</label>
-                        <input type="time" id="time" required>
+                        <input type="time" id="time" name="time" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Agendar</button>
                 </form>
@@ -94,6 +94,6 @@
         <p>&copy; 2024 SportBook - Todos os direitos reservados</p>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
-</html>
+</html> 
